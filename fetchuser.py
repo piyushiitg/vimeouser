@@ -11,7 +11,6 @@ def create_entry():
     Staffpick='NO'
     Video='NO'
     try:
-        fetchurl = []
         crawling = fetchurl.pop()
     except:
         print "fetchurl is empty:"
