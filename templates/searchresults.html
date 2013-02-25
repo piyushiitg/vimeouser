@@ -1,0 +1,13 @@
+{% if v_users %}
+    <p>{{ length }} results.</p>
+    <ul>
+        {% for users in v_users %}
+        <li><p>{{ users.Name }}</br>
+		Paying? {{ users.Paying }}</br>
+		StaffPick? {{ users.StaffPick }}</br>
+		Uploaded? {{ users.Video }}</p></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No Users Found.</p>
+{% endif %}

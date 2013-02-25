@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Search</title>
+	
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function()
+  {
+     //alert('ss');
+     $('input[name=info]').attr('checked', false);
+     txt=$("#user").val();
+     $.get("/search/",{userq:txt,type:'button'},function(result,status)
+     {
+     $('#All').attr('checked', true);
+	$("p").empty();
+        $("p").append(result);
+     });
+  });
+
+  $("#user").change(function() 
+  { 
+    $("p").empty();
+    $('input[name=info]').attr('checked', false);
+  });
+
+$('input[name=info]').click(function()
+{
+   //alert('ss');
+    //if($("p").html())
+    //{
+        txt=$("#user").val();
+        t=$(this).attr("id");
+        $.get("/search/",{userq:txt,type:t},function(result,status)
+        {
+	  $("p").empty();
+          $("p").append(result);
+       });
+        
+    //}
+});
+
+ 
+
+});
+</script>
+</head>
+<body>
+    
+        <input type="text" id="user">
+		<button>Search</button><br>
+         Filter: 
+          <input type="radio" name="info" id="All">All
+		<input type="radio" name="info" id="Paying">Paying
+		<input type="radio" name="info" id="Uploaded">Uploaded
+		<input type="radio" name="info" id="StaffPick">StaffPick
+		<p></p>
+    
+</body>
+</html>
