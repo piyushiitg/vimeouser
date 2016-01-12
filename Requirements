@@ -1,0 +1,44 @@
+
+Objective: to pull information from Vimeo users and provide a basic front-end to search various attributes of those users.
+
+1. The site www.vimeo.com has approximately 15.8M users. You will write a script that crawls Vimeo to store the following information on 5,000 of these users in MySQL.
+
+-	Name
+-	URL of their vimeo user page
+-	Whether they are a paying user (yes/no)
+-	Whether they have one or more videos that are a “Vimeo Staff Pick” (yes/no)
+-	Whether they have one or more videos they have uploaded to Vimeo (yes/no)
+
+Here are two examples to illustrate:
+
+Name: Cristóbal Vila
+URL: http://vimeo.com/eterea
+Paying: Yes (hint: see the blue “PLUS” badge that is located next  to their name)
+Staff Pick: Yes (hint: http://vimeo.com/57125220) 
+Video: Yes
+
+Name: Luis García-Ochoa
+URL: http://vimeo.com/luisg8a
+Paying: No
+Staff Pick: No
+Video: Yes
+
+2. Create a one-page basic front-end using django to allow:
+
+-	Search for a Vimeo user (within the 5,000 users in your database).
+-	Show the number of search results
+-	You do not need to paginate. You can limit the search to 100 results (though the search number should still show total, even if greater than 100.)
+-	Able to filter the search results by the following three items:
+1.	Whether they are a paying user.
+2.	Whether they have a Vimeo Staff Pick.
+3.	Whether they have a video upload.
+
+Please see the image on the next page as a reference. 
+
+All searches and filters must be done through AJAX. There should never be a full page re-load after the user types in the url.
+
+
+For your final deliverable, please send us a link to the website, and we will test it.
+
+The above instructions and attached image give you all the information you need, and we will not be answering any questions related to this assignment. Good luck!
+
